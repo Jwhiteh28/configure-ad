@@ -143,6 +143,6 @@ This guide covers the implementation of an on-premises Active Directory setup us
 </li>
 <img src="" width="600" alt="AD"/>
 </ul>
-<p>As shown, the PowerShell script successfully created a user with the username **"bid.tuk"**. We were then able to log in to **Client-1** using this account’s credentials as a standard user.
+<p>As shown, the PowerShell script successfully created a user with the username **"mog.raki"**. We were then able to log in to **Client-1** using this account’s credentials as a standard user.
 </p>
 <img src="" width="600" alt="AD"/>
