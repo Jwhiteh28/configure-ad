@@ -26,7 +26,7 @@ This guide covers the implementation of an on-premises Active Directory setup us
     <li>In the Server Manager dashboard</li>
     <li>Click Add roles and features</li>
     <li>Select Active Directory Domain Services and finish the installation</li>
-    <img src="" width="600" alt="AD"/>
+    <img src="https://i.imgur.com/S6IjH92.png" width="600" alt="AD"/>
   </ul>
 </p>
 <br />
@@ -38,9 +38,9 @@ This guide covers the implementation of an on-premises Active Directory setup us
     <li>Promote DC-1 to Domain Controller</li>
     <li>Setup a new forest as "mydomain.com"</li>
     <li>Restart and then log back into DC-1 as user:</li>
-    <img src="" width="600" alt="AD"/>
+    <img src="https://i.imgur.com/CwWB3iN.png" width="600" alt="AD"/>
     <li>Run Active Directory Users & Computers shown below</li>
-    <img src="" width="600" alt="AD"/>
+    <img src="https://i.imgur.com/rFPPfn3.png" width="600" alt="AD"/>
   </ul>
 </p>
 <br />
@@ -50,9 +50,9 @@ This guide covers the implementation of an on-premises Active Directory setup us
 <p>
 - Right click on mydomain.com and select New and click on Organizational Unit
 </p>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/baIUUZ5.png" width="600" alt="AD"/>
 <p>- Create OU_EMPLOYEES and _ADMINS</p>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/gfar0X4.png" width="600" alt="AD"/>
 <br />
 
 
@@ -60,7 +60,7 @@ This guide covers the implementation of an on-premises Active Directory setup us
 <ul>
   <li>Right click on the OU _ADMINS and create a new user named Jane Doe</li>
   <li>With the username jane_admin</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/5ZCBGa8.png" width="600" alt="AD"/>
 </ul>
 <br />
 
@@ -69,7 +69,7 @@ This guide covers the implementation of an on-premises Active Directory setup us
 <ul>
   <li>Make Jane Doe into an admin by right clicking her name > properties</li>
   <li>Member of and adding her to the "Domain Admins" Security Group</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/jOWw7m3.png" width="600" alt="AD"/>
 </ul>
 <br />
 
@@ -78,7 +78,7 @@ This guide covers the implementation of an on-premises Active Directory setup us
 <ul>
   <li>Log in as "mydomain.com\jane_admin"</li>
   <li>Use jane_admin as your admin account from now on</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/eDY45PT.png" width="600" alt="AD"/>
 </ul>
 <br />
 
@@ -88,23 +88,23 @@ This guide covers the implementation of an on-premises Active Directory setup us
   <li>Right click the start menu > click system > click rename this pc advanced</li>
   <li>Under the computer name tab, click on "Change"</li>
   <li>Join it to the domain "mydomain.com"</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/3VId8pg.png" width="600" alt="AD"/>
   <li>Enter the name and password of an account with permission to join the domain</li>
   <li>Use the account: mydomain.com\jane_admin</li>
   <li>Once Client-1 has been added, the VM will restart</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/AjSrttS.png" width="600" alt="AD"/>
 </ul>
 <br />
 
 
 <h2>Step 8: Log into the Domain Controller and verify Client-1 appears in ADUC</h2>
 <p>Expand mydomain.com then go to "computers" to verify</p>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/q9GGutL.png" width="600" alt="AD"/>
 <br />
 
 
 <h2>Step 9: Create a new OU named "_CLIENTS" and drag Client-1 into it</h2>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/GWagISK.png" width="600" alt="AD"/>
 <br />
 
 
@@ -115,7 +115,7 @@ This guide covers the implementation of an on-premises Active Directory setup us
   <li>Click on "Remote Desktop" on User Accounts and click "Select users that can remotely access this PC"</li>
   <li>Allow "Domain Users" access to remote desktop</li>
   <li>After completing those steps you should be able to log into Client-1 as normal user (any user)</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/TABonUl.png" width="600" alt="AD"/>
 </ul>
 <br />
 
@@ -128,9 +128,9 @@ This guide covers the implementation of an on-premises Active Directory setup us
   <li>https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1</li>
   <li>Paste the script to generate thousands of users into the domain</li>
   <li>Run Script</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/DfUO0U8.png" width="600" alt="AD"/>
   <li>When finished, open ADUC and observe the accounts in the appropriate OU "_EMPLOYEES"</li>
-  <img src="" width="600" alt="AD"/>
+  <img src="https://i.imgur.com/5f6kAx3.png" width="600" alt="AD"/>
 </ul>
 <br />
 
@@ -141,8 +141,8 @@ This guide covers the implementation of an on-premises Active Directory setup us
 </li>
   <li>Please note the script's default password — `Password1` — which is assigned to all user accounts.
 </li>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/BWlWMtp.png" width="600" alt="AD"/>
 </ul>
 <p>As shown, the PowerShell script successfully created a user with the username **"mog.raki"**. We were then able to log in to **Client-1** using this account’s credentials as a standard user.
 </p>
-<img src="" width="600" alt="AD"/>
+<img src="https://i.imgur.com/zx2OF0y.png" width="600" alt="AD"/>
